@@ -19,7 +19,7 @@ const main = async () => {
         password: "",
         logging: true,
         synchronize: false,  // set it to true when creating new table
-        entities: [Games],
+        entities: [Users, Games],
     });
 
 
