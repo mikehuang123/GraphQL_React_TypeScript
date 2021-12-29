@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import './App.css';
 import CreateUser from './Componets/CreateUser';
+import ListOfGame from './Componets/ListOfGame';
 
 function App() {
   const client = new ApolloClient({
@@ -14,6 +15,7 @@ function App() {
     <>
       <ApolloProvider client = {client}>
         <CreateUser />
+        <ListOfGame />
       </ApolloProvider>
     </>
   );

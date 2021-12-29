@@ -19,13 +19,13 @@ function CreateUser(){
                 ()=> {
                     createUser({
                     variables:{name:name, username: username, password:password}
-                    })
+                    });
                 }
                 }>
                 Create User
             </button><br/>
         </div>
-    )
+    );
 }
 
-export default CreateUser
+export default CreateUser;
