@@ -17,47 +17,29 @@ function ListOfGame() {
     // }
     return (
         <div>
-            {/* <table>
-                            <tr>
-                                <th>Title</th>
-                                <th>Publisher</th>
-                                <th>Description</th>
-                            </tr>
-                            <tr>
-                                <td>{game.title}</td>
-                                <td>{game.publisher}</td>
-                                <td>{game.description}</td>
-                            </tr>
-                        </table>  */}
-            {data &&
-            (data.getAllGames.map((game:any)=>{
-                return <div>
-                        {<TableContainer component={Paper}>
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Title</TableCell>
-                                    <TableCell align="right">Publisher</TableCell>
-                                    <TableCell align="right">Description</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                    <TableRow>
-                                    <TableCell component="th" scope="row">
-                                        {game.title}
-                                    </TableCell>
-                                    <TableCell align="right">{game.publisher}</TableCell>
-                                    <TableCell align="right">{game.description}</TableCell>
-                                    </TableRow>
-                                    </TableBody>
-                            </Table>
-                            </TableContainer>
-                        }
-                    </div>
-            }))}
-             
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell align="center">Title</TableCell>
+                            <TableCell align="center">Publisher</TableCell>
+                            <TableCell align="center">Description</TableCell>
+                        </TableRow>
+                    </TableHead>
+                <TableBody>              
+                    {data && (data.getAllGames.map((game:any)=>{
+                        return <TableRow key={game.id}>
+                            <TableCell align="center">{game.title}</TableCell>
+                            <TableCell align="center">{game.publisher}</TableCell>
+                            <TableCell align="center">{game.description}</TableCell>
+                        </TableRow>
+                    }))}
+                    </TableBody> 
+            </Table>
+            </TableContainer> 
         </div>
-    )
+       
+    );
 }
 
 export default ListOfGame

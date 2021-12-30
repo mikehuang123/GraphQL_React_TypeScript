@@ -18,9 +18,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
 import ListOfGame from '../ListOfGame';
 
 function Copyright(props: any) {
@@ -189,12 +186,12 @@ function DashboardContent() {
                   }}
                 >
                   {/* <Deposits /> */}
+                  
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
+              {/* List Of Games */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  {/* <Orders /> */}
                   <ListOfGame />
                 </Paper>
               </Grid>
